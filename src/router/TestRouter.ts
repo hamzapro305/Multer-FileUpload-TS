@@ -3,8 +3,11 @@ import { MulterConfigured } from "../config/MulterConfig";
 import TestController from "../Controller/TestController";
 
 const TestRouter = Router()
-const upload = MulterConfigured([".zip", ".json"], "RAM")
+// Multer Instance Created which can accept .apk files and store temporary in RAM
+const uploadUsingRam = MulterConfigured([".apk"], { type: "RAM" })
+// Multer Instance Created which can accept .apk files and store temporary in RAM
+const uploadUsingDisk = MulterConfigured([".apk"], { type: "DISK", destination: "/upload" })
 
-TestRouter.post("/upload", upload.single("file"), TestController.uploadFile)
+TestRouter.post("/upload", uploadUsingRam.single("file"), TestController.uploadFile)
 
 export default TestRouter
