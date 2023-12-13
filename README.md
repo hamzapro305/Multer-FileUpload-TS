@@ -1,4 +1,4 @@
-# Project Name
+# Multer File Upload Fully Configured In TypeScript For Express
 
 This is a sample project that showcases how to configure Multer in an Express application using TypeScript.
 
