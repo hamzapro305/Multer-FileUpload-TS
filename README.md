@@ -59,7 +59,7 @@ This is a sample project that showcases how to configure Multer in an Express ap
 - POST /upload: Upload one or multiple files.
 
 ## File Structure
-
+   
    ├── src/
    |   ├── @Types/
    │   │   └── MimeType.ts
